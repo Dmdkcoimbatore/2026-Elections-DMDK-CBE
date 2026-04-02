@@ -1,0 +1,172 @@
+:root {
+  --dmdk-red: #ed1c24;
+  --dmdk-black: #000000;
+  --dmdk-yellow: #fff200;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background-color: var(--white);
+}
+
+/* --- Navigation --- */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 5%;
+  background: var(--white);
+  border-bottom: 5px solid var(--dmdk-red); /* Stronger Red line */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo img {
+  width: 55px;
+  height: auto;
+}
+.logo-sentence {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--dmdk-black);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: var(--dmdk-black);
+  font-weight: 700;
+}
+
+/* --- Hero Section with Restored Color --- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 6%;
+  gap: 40px;
+  /* RESTORED GRADIENT: Stronger Yellow Shade */
+  background: linear-gradient(
+    145deg,
+    #ffffff 40%,
+    rgba(255, 242, 0, 0.2) 70%,
+    rgba(255, 242, 0, 0.4) 100%
+  );
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 80px 10%;
+    min-height: 85vh;
+  }
+}
+
+.hero-content {
+  flex: 1.2;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .hero-content {
+    text-align: left;
+  }
+}
+
+.main-title {
+  color: var(--dmdk-red);
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 1024px) {
+  .main-title {
+    font-size: 3.5rem;
+    white-space: nowrap;
+  }
+}
+
+.sub-headline {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--dmdk-black);
+}
+
+.description-box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* --- Image Color & Shadow Restoration --- */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  border: 8px solid var(--dmdk-black); /* Bold Black Border */
+  /* RESTORED RED BOX SHADOW */
+  box-shadow: 15px 15px 0px var(--dmdk-red);
+}
+
+/* --- Button Color --- */
+.cta-button {
+  width: 100%;
+  max-width: 320px;
+  padding: 18px;
+  background-color: var(--dmdk-red);
+  color: var(--white);
+  border: 3px solid var(--dmdk-black);
+  font-size: 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (min-width: 1024px) {
+  .cta-button {
+    width: auto;
+    padding: 18px 50px;
+  }
+}
+
+.cta-button:hover {
+  background-color: var(--dmdk-black);
+  color: var(--dmdk-yellow);
+}
+
+.footer {
+  text-align: center;
+  padding: 50px;
+  background: var(--dmdk-black);
+  color: var(--white);
+}
